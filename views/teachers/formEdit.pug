@@ -1,0 +1,23 @@
+extends ../layout.pug
+block contenido
+    form(action="/teachers/update", method="POST")
+        .container
+            .row
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Nombre
+                        input.form-control(type="text", name="name", value=teacher.name)
+                    .form-group
+                        label Apellidos
+                        input.form-control(type="text", name="surname", value=teacher.surname)
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Edad
+                        input.form-control(type="number", name="age", value=teacher.age)
+                    .form-group
+                        label Especialidad
+                        input.form-control(type="text", name="specialism", value=teacher.specialism)
+        
+        input(type="hidden", name="id", value=teacher.id)
+                
+        input.btn.btn-info.btn-block.form-control.my-4(type="submit", value="Enviar")

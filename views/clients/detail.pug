@@ -1,0 +1,10 @@
+extends ../layout.pug
+
+block contenido
+    h3.mt-5 Detalle del cliente
+    p Nombre: #{client.name}
+    p Apellido: #{client.surname}
+    p Email: #{client.email}
+    p Teléfono: #{client.telephone}
+    p Dirección: #{client.address}
+    p Activo: #{client.active ? "SI" : "NO"}

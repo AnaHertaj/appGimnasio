@@ -1,0 +1,10 @@
+extends ../layout.pug
+
+block contenido
+    h3.mt-5 Detalle del instructor: 
+        strong #{teacher.id}
+    .mt-5
+        p Nombre: #{teacher.name}
+        p Apellido: #{teacher.surname}
+        p Edad: #{teacher.age}
+        p Especialidad: #{teacher.specialism}

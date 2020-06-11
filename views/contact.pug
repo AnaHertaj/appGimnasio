@@ -1,0 +1,41 @@
+extends layout.pug
+//- mixin lista /-mixin si lo quiero global me lo llevo al layout y siempre que llame al layout estará disponible
+//-     ul
+//-         li Uno 
+//-         li Dos
+//-         li Tres
+
+mixin lista(coleccion)
+    ul
+        each val in coleccion
+            li= val
+
+block content
+    .wrapper
+        h3 Página de contacto
+        h5 Deja tus datos
+        .container
+            .row
+                .col-6
+                    +lista(numeros)
+                    //- le pasamos un valor a la función mix , ese valor será un array/variable
+                    +lista([])
+                .col-6
+                    +lista(["Hola", "adios"]) 
+                    //- esto no se usa pero como ejemplo
+        .image
+            <img src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-128.svg" height="200" align="center">
+
+        p
+            | Texto plano dentro del párrafo
+        
+        script.
+            console.log("Hola Mundo");
+            if(true){
+                console.log("Entra en TRUE");
+            }
+            $(document).ready(()=>{
+                console.log("Estamos ready");
+            })
+block footer
+    p.center Pie de página de contacto

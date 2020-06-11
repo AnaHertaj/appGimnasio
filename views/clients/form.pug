@@ -1,0 +1,30 @@
+extends ../layout.pug
+block contenido
+    form(action="/clients/create", method="POST")
+        .container
+            .row
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Nombre
+                        input.form-control(type="text", name="name")
+                    .form-group
+                        label Apellidos
+                        input.form-control(type="text", name="surname")
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Email
+                        input.form-control(type="text", name="email")
+                    .form-group
+                        label Teléfono
+                        input.form-control(type="number", name="telephone")
+
+                .col-xs-12.col-sm-12
+                    .form-group
+                        label Dirección
+                        input.form-control(type="textarea", name="address")
+                .col-xs-2.col-sm-2
+                    .form-group
+                        label Activo
+                            input.form-control(type="checkbox", name="active")
+                
+        input.btn.btn-info.btn-block.form-control.my-2(type="submit", value="Enviar")

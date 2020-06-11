@@ -1,0 +1,22 @@
+extends ../layout.pug
+block contenido
+    table.table 
+        thead
+            tr
+                th Nombre
+                th Apellido
+                th Edad
+                th Especialidad
+                th Acciones
+        tbody 
+            each teacher in teachers 
+                tr  
+                    td= teacher.name
+                    td= teacher.surname
+                    td= teacher.age
+                    td= teacher.specialism
+                    td 
+                        a.btn.btn-primary.btn-sm.m-1(href="/teachers/"+teacher._id,target="_blank") DETALLE
+                        a.btn.btn-info.btn-sm.m-1(href="/teachers/edit/"+teacher._id, target="") EDITAR
+                        a.btn.btn-danger.btn-sm.m-1(href="/teachers/remove/"+teacher._id, target="") BORRAR
+                        

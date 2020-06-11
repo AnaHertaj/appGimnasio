@@ -1,0 +1,70 @@
+GET http://localhost:3000/api/clients
+
+###
+
+POST http://localhost:3000/api/clients
+//hay que pasar una cabecera
+Content-Type: application/json
+
+{
+    "name": "Polonia",
+    "surname": "Pérez",
+    "email": "jdjaskdjas@hotamil.com",
+    "telephone": "3432432434",
+    "address": "Lituania",
+    "active": false
+}
+//hay que pasar el objeto completo, con todo lo que tenga el modelo
+###
+
+PUT http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "id": "5ed21a8c18f6fe054160569b",
+    "name": "Mery Joan M",
+    "surname": "Ingalls",
+    "email": "meing@hotmail.com",
+    "telephone": 454887777,
+    "address": "Milwaeke City Center",
+    "active": true
+}
+//Separar con espacio la cabecera 
+
+###
+DELETE http://localhost:3000/api/clients/5ed23a41f9c2fe0780429f31
+
+
+###
+
+GET http://localhost:3000/api/teachers
+
+###
+
+POST http://localhost:3000/api/teachers
+Content-Type: application/json
+
+{
+    "name": "Amelia",
+    "surname": "San Juan",
+    "age": 53,
+    "specialism": "YOGA"
+}
+
+###
+
+PUT http://localhost:3000/api/teachers
+Content-Type: application/json
+
+{
+    "id" : "5ed4197c0fab850579152277",
+    "name" : "Benito",
+    "surname" : "Pérez Galdós",
+    "age" : 36,
+    "specialism" : "SPINNING"
+}
+
+###
+
+DELETE http://localhost:3000/api/teachers/5ed41a240fab85057915227b
+

@@ -1,0 +1,33 @@
+extends ../layout.pug
+block contenido
+    table.table 
+        thead
+            tr
+                th Name
+                th Surname
+                th Email
+                th Telephone
+                th Address
+                th Active
+                th Actions
+        tbody 
+            each client in clients 
+                tr  
+                    td= client.name
+                    td= client.surname
+                    td= client.email
+                    td= client.telephone
+                    td= client.address
+                    td= client.active
+                    td 
+                        a.btn.btn-primary.btn-sm.m-1(href="/clients/"+client._id,target="_blank") DETALLE
+                        //- también funciona con id sin _ en vez de con _id
+                        a.btn.btn-info.btn-sm.m-1(href="/clients/edit/"+client._id, target="") EDITAR
+                        a.btn.btn-danger.btn-sm.m-1(href="/clients/remove/"+client._id, target="") BORRAR
+                        
+
+
+
+
+//- each client in clients >>> el segundo es el array que viene del controlador, el client me lo invento pero usar el singular es perfecto
+//- h3.mt-3.mb-5 también mx-3 eje equis, my-5 eje y

@@ -1,0 +1,31 @@
+extends ../layout.pug
+//-rellenar bloques de ese layout
+block contenido
+    h5.my-5 Edita aquí tu cliente
+        //- form(action="/clients/update"+clientId, method="POST")
+    form(action="/clients/update", method="POST")
+        .container
+            .row
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Nombre 
+                        input.form-control(type="text", name="name", value=client.name)
+                    .form-group
+                        label Apellidos
+                        input.form-control(type="text", name="surname", value=client.surname)
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Email
+                        input.form-control(type="text", name="email", value=client.email)
+                    .form-group
+                        label Teléfono
+                        input.form-control(type="number", name="telephone", value=client.telephone)
+
+                .col-xs-12.col-sm-12
+                    .form-group
+                        label Dirección
+                        input.form-control(type="textarea", name="address", value=client.address)
+
+        input(type="hidden", name="id", value=client.id)
+                
+        input.btn.btn-info.btn-block.form-control.my-5(type="submit", value="Enviar")

@@ -1,0 +1,21 @@
+extends ../layout.pug
+block contenido
+    form(action="/teachers/create", method="POST")
+        .container
+            .row
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Nombre
+                        input.form-control(type="text", name="name")
+                    .form-group
+                        label Apellidos
+                        input.form-control(type="text", name="surname")
+                .col-xs-12.col-sm-6
+                    .form-group
+                        label Edad
+                        input.form-control(type="number", name="age")
+                    .form-group
+                        label Especialidad
+                        input.form-control(type="text", name="specialism")
+                
+        input.btn.btn-info.btn-block.form-control.my-4(type="submit", value="Enviar")

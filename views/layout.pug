@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        .cabecera
+            a(href="/").image
+                <img src="/images/pug-gym.svg" height="200" align="center">
+            nav
+                ul
+                    li 
+                        a(href="/clients") Lista de Clientes 
+                        //- app.use('/clients', clientsRouter); en app.js
+                    li 
+                        a(href="/clients/new") Nuevo cliente 
+                    li 
+                        a(href="/teachers") Lista de profesorado
+                    li 
+                        a(href="/teachers/new") Nuevo instructor 
+        .container
+            block contenido
